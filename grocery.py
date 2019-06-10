@@ -50,27 +50,42 @@ products = [
 
 # TODO: write some Python code here to produce the desired output
 
+products_count = len(products)
 
+print(type(products))
 
 print("--------------")
-print("THERE ARE " + 20 + " PRODUCTS:")
+print("THERE ARE " + str(products_count) + " PRODUCTS:")
 print("--------------")
 
+#{
+#    "id": 1, 
+#    "name": "Chocolate Sandwich Cookies",
+#    "department": "snacks", 
+#    "aisle": "cookies cakes", 
+#    "price": 3.50
+#     },
+
+for p in products:
+   # print(p["name"])
+    #price_usd = p["price"] #
+    price_usd = " (${0:.2f})".format(p["price"])
+    print(" .... " + p["name"] + price_usd)
 
 # I want to now print on each line 
 # + , name , price
 # I want the final product list to be in alphabetical order by client name 
 
 
-for i in range(0, 20):
-   print(products[i]['name'])
+#for i in range(0, 20):
+#   print(products[i]['name'])
 
 
 # Desired output
 #--------------
 #HERE ARE 20 PRODUCTS:
 #-------------
-# All-Seasons Salt($4.99)
+# + All-Seasons Salt($4.99)
 # Chocolate Fudge Layer Cake($18.50)
 # Chocolate Sandwich Cookies($3.50)
 # Cut Russet Potatoes Steam N' Mash($4.25)
