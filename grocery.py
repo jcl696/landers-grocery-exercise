@@ -122,15 +122,31 @@ for p in products:
 #+ Personal Care(2 products)
 #+ Snacks(2 products)
 
+#arr = [1, 2, 3, 4]
+#arr2 = []
+#
+#for i in arr:
+#  arr2.append(i * 100)
+#
+#arr  # > [1, 2, 3, 4]
+#arr2  # > [100, 200, 300, 400]
+
+departments = []
+
+for p in products:
+    #products.append
+    #print(p["departments"])
+    if p["department"] not in departments:
+        departments.append(p["department"])
 
 
-department = []
-
-department_count = len(department)
+department_count = len(departments)
 
 print("--------------")
 print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
 print("--------------")
 
 
+for d in departments:
+    print(d)
 
