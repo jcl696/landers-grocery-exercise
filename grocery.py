@@ -122,14 +122,6 @@ for p in products:
 #+ Personal Care(2 products)
 #+ Snacks(2 products)
 
-#arr = [1, 2, 3, 4]
-#arr2 = []
-#
-#for i in arr:
-#  arr2.append(i * 100)
-#
-#arr  # > [1, 2, 3, 4]
-#arr2  # > [100, 200, 300, 400]
 
 departments = []
 
@@ -155,5 +147,10 @@ unique_departments.sort()
 for d in unique_departments:
     matching_products = [p for p in products if p["department"] == d]
     matching_products_count = len(matching_products)
-    print(d.title() + " (" + str(matching_products_count) + " products)")
+    if matching_products_count > 1: 
+        label = "products"
+    else: 
+        label = "product"
+    print(" + " + d.title() + " (" + str(matching_products_count) + " " + label + ")")
 
+# we just identified how many products were matching each department 
