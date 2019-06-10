@@ -1,3 +1,5 @@
+import operator
+
 # groceries.py
 
 #from pprint import pprint
@@ -50,6 +52,9 @@ products = [
 
 # TODO: write some Python code here to produce the desired output
 
+products = sorted(products, key=operator.itemgetter("name"))
+
+
 products_count = len(products)
 
 print(type(products))
@@ -70,7 +75,8 @@ for p in products:
    # print(p["name"])
     #price_usd = p["price"] #
     price_usd = " (${0:.2f})".format(p["price"])
-    print(" .... " + p["name"] + price_usd)
+    print(" + " + p["name"] + price_usd)
+
 
 # I want to now print on each line 
 # + , name , price
